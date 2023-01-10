@@ -1,0 +1,26 @@
+package main
+import "fmt"
+
+func main(){
+	var skor1, skor2, skor3, total1, total2, total3, skor_tertinggi int
+
+	fmt.Scan(&skor1, &skor2, &skor3)
+
+	for (skor1 != 0) && (skor2 != 0) && (skor3 != 0) {
+		total1 += skor1
+		total2 += skor2
+		total3 += skor3
+
+		fmt.Scan(&skor1, &skor2, &skor3)
+	}
+
+	if(total1 >= total2) && (total1 >= total3 ){
+		skor_tertinggi = total1
+	} else if(total2 >= total1) && (total2 >= total3 ){
+		skor_tertinggi = total2
+	} else if (total3 >= total1) && (total3 >= total2 ){
+		skor_tertinggi = total3
+	}
+
+	fmt.Print(total1, total2, total3, skor_tertinggi)
+}
