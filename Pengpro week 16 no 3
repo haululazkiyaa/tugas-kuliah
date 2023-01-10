@@ -1,0 +1,25 @@
+package main
+
+import "fmt"
+
+func main() {
+  var tipe string
+  var awal, akhir int
+
+  fmt.Scan(&tipe)
+  fmt.Scan(&awal)
+  fmt.Scan(&akhir)
+  if tipe == "genap" {
+    for i := awal; i <= akhir; i++ {
+      if i%2 == 0 {
+        fmt.Print(i, " ")
+      }
+    }
+  } else if tipe == "ganjil" {
+    for i := awal; i <= akhir; i++ {
+      if i%2 == 1 {
+        fmt.Print(i, " ")
+      }
+    }
+  }
+}
