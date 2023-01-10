@@ -1,0 +1,22 @@
+package main
+
+import "fmt"
+
+func main() {
+	var bilangan, angkaterbesar, angkaterbesar2 int
+
+	angkaterbesar = 0
+	angkaterbesar2 = 0
+
+	fmt.Scan(&bilangan)
+
+	for bilangan != 0 {
+		if (bilangan > angkaterbesar) {
+			angkaterbesar2 = angkaterbesar
+			angkaterbesar = bilangan
+		} 
+		fmt.Scan(&bilangan)
+	}
+	
+	fmt.Print(angkaterbesar2)
+}
