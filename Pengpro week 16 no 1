@@ -1,0 +1,20 @@
+package main
+
+import "fmt"
+
+func main() {
+	var dadu1, dadu2, dadu3, jml_matadadu, jml_matadaduganjil int
+
+	jml_matadadu = 0
+	jml_matadaduganjil = 0
+
+	for jml_matadadu != 10 {
+		fmt.Scan(&dadu1, &dadu2, &dadu3)
+		if (dadu1 % 2 != 0) && (dadu2 % 2 != 0) && (dadu3 % 2 != 0) {
+			jml_matadaduganjil = jml_matadaduganjil + 1
+		}
+		jml_matadadu = dadu1 + dadu2 + dadu3
+	}
+
+	fmt.Print(jml_matadaduganjil)
+}
