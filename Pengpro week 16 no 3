@@ -1,0 +1,23 @@
+package main 
+import "fmt" 
+ 
+func main(){ 
+ var inputan, terbesar, terkecil int 
+ 
+ fmt.Scan(&inputan) 
+  
+ terbesar = 0 
+ terkecil = inputan 
+ 
+ for inputan != 0{ 
+  if inputan > terbesar{ 
+   terbesar = inputan 
+  } else if inputan < terkecil{ 
+   terkecil = inputan 
+  } 
+ 
+  fmt.Scan(&inputan) 
+ } 
+ 
+ fmt.Print(terbesar, terkecil) 
+}
