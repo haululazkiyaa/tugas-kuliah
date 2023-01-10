@@ -9,12 +9,15 @@ func main() {
 	angkaterbesar2 = 0
 
 	fmt.Scan(&bilangan)
-
+ 
 	for bilangan != 0 {
-		if (bilangan > angkaterbesar) {
+		if bilangan > angkaterbesar{
 			angkaterbesar2 = angkaterbesar
 			angkaterbesar = bilangan
-		} 
+		
+		}else if (bilangan <= angkaterbesar) && (bilangan > angkaterbesar2){
+			angkaterbesar2 = bilangan
+		}
 		fmt.Scan(&bilangan)
 	}
 	
